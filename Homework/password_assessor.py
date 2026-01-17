@@ -80,13 +80,10 @@ def check_password():
     met = result["met"]
     if met < 4 or "X Common password!" in result["details"]:
         rating = "Weak"
-        color = "red"
     elif met < 7:
         rating = "Moderate"
-        color = "orange"
     else:
         rating = "Strong"
-        color = "green"
 
     # Update display
     details_text.delete(1.0, tk.END)
